@@ -14,17 +14,17 @@ $prodotti = [
 try {
     $cuccia1 ->setPrezzo(30);
 } catch (Exception $e) {
-
+    $errore = $e->getMessage();
 }
 try {
     $cibo1 ->setPrezzo(10);
-} catch (Exception $e) {
-
+} catch (Exception $e){
+    $errore = $e->getMessage();
 }
 try {
     $gioco1 ->setPrezzo(20);
 } catch (Exception $e) {
-
+    $errore = $e->getMessage();
 }
 
 
@@ -56,7 +56,7 @@ try {
                             <p>Prezzo: <?php if(is_int($prodotto-> prezzo)){
                              echo $prodotto->prezzo; 
                              }else{
-                                echo "Si è verificato un errore sul prodotto: " . $e->getMessage();
+                                echo "Si è verificato un errore sul prodotto: " . $errore;
                              } ?> </p>
                             
                             <p>Categoria: <?php echo $prodotto->categoria ?> </p>
