@@ -12,19 +12,19 @@ $prodotti = [
 ];
 
 try {
-    $cuccia1 ->setPrezzo(40);
+    $cuccia1 ->setPrezzo(30);
 } catch (Exception $e) {
-    echo "Si è verificato un errore sul prodotto: ". $cuccia1 ->nome . ', '. $e->getMessage();
+
 }
 try {
     $cibo1 ->setPrezzo(10);
 } catch (Exception $e) {
-    echo "Si è verificato un errore sul prodotto: ". $cibo1 ->nome . ', '. $e->getMessage();
+
 }
 try {
-    $gioco1 ->setPrezzo(30);
+    $gioco1 ->setPrezzo(20);
 } catch (Exception $e) {
-    echo "Si è verificato un errore sul prodotto: ". $gioco1 ->nome . ', '. $e->getMessage();
+
 }
 
 
@@ -53,7 +53,12 @@ try {
                         <img src="https://picsum.photos/200" class="card-img-top" alt="foto casuale">
                         <div class="card-body">
                             <h5 class="card-title"> <?php echo $prodotto->nome ?> </h5>
-                            <p>Prezzo: <?php echo $prodotto->prezzo ?></p>
+                            <p>Prezzo: <?php if(is_int($prodotto-> prezzo)){
+                             echo $prodotto->prezzo; 
+                             }else{
+                                echo "Si è verificato un errore sul prodotto: " . $e->getMessage();
+                             } ?> </p>
+                            
                             <p>Categoria: <?php echo $prodotto->categoria ?> </p>
                             <?php if ($prodotto->animale == 'cane') {
                                 echo '<i class="fa-solid fa-dog "></i>';
