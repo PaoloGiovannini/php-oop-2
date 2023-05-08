@@ -7,7 +7,7 @@ trait Prezzo {
         if (is_int($prezzo)) {
             $this->prezzo = $prezzo;
         } else {
-            throw new Exception('prezzo non valido <br>');
+            throw new Exception('prezzo non valido');
         }
         
     }

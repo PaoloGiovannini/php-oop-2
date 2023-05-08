@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../Traits/Prezzo.php';
-Class Prodotti {
+Class Prodotto {
     use Prezzo;
     public $nome;
 

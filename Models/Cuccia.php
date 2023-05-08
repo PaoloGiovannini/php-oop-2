@@ -1,5 +1,5 @@
 <?php
-    class Cucce extends Prodotti {
+    class Cuccia extends Prodotto {
         public $dimensione;
         public $colore;
     

@@ -1,14 +1,14 @@
 <?php
 
-require_once __DIR__ . '/Models/Prodotti.php';
+require_once __DIR__ . '/Models/Prodotto.php';
 require_once __DIR__ . '/Models/Cibo.php';
-require_once __DIR__ . '/Models/Cucce.php';
-require_once __DIR__ . '/Models/Giochi.php';
+require_once __DIR__ . '/Models/Cuccia.php';
+require_once __DIR__ . '/Models/Gioco.php';
 
 $prodotti = [
-    $cuccia1 = new Cucce('Cuccia bella', 'Cucce', 'cane', 'L', 'Verde'),
+    $cuccia1 = new Cuccia('Cuccia bella', 'Cucce', 'cane', 'L', 'Verde'),
     $cibo1 = new Cibo('Cibo Buono', 'Cibo', 'gatto', '4kg', 'cibo secco', '1-4 anni'),
-    $gioco1 = new Giochi('Gioco Bello', 'Giochi', 'cane', 'gomma')
+    $gioco1 = new Gioco('Gioco Bello', 'Giochi', 'cane', 'gomma')
 ];
 
 try {

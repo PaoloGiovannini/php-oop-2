@@ -1,5 +1,5 @@
 <?php
-    class Cibo extends Prodotti {
+    class Cibo extends Prodotto {
         public $peso;
         public $tipo_cibo;
         public $eta;
