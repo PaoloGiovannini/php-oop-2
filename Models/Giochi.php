@@ -2,8 +2,8 @@
     class Giochi extends Prodotti {
         public $materiale;
     
-        public function __construct($nome, $prezzo, $categoria, $animale, $materiale,) {
-            parent::__construct($nome, $prezzo, $categoria, $animale);
+        public function __construct($nome, $categoria, $animale, $materiale,) {
+            parent::__construct($nome, $categoria, $animale);
             $this->materiale = $materiale;
         }
     }

@@ -6,10 +6,28 @@ require_once __DIR__ . '/Models/Cucce.php';
 require_once __DIR__ . '/Models/Giochi.php';
 
 $prodotti = [
-    $cuccia1 = new Cucce('Cuccia bella', '20€', 'Cucce', 'cane', 'L', 'Verde'),
-    $cibo1 = new Cibo('Cibo Buono', '20€', 'Cibo', 'gatto', '4kg', 'cibo secco', '1-4 anni'),
-    $gioco1 = new Giochi('Gioco Bello', '10€', 'Giochi', 'cane', 'gomma')
+    $cuccia1 = new Cucce('Cuccia bella', 'Cucce', 'cane', 'L', 'Verde'),
+    $cibo1 = new Cibo('Cibo Buono', 'Cibo', 'gatto', '4kg', 'cibo secco', '1-4 anni'),
+    $gioco1 = new Giochi('Gioco Bello', 'Giochi', 'cane', 'gomma')
 ];
+
+try {
+    $cuccia1 ->setPrezzo(40);
+} catch (Exception $e) {
+    echo "Si è verificato un errore sul prodotto: ". $cuccia1 ->nome . ', '. $e->getMessage();
+}
+try {
+    $cibo1 ->setPrezzo(10);
+} catch (Exception $e) {
+    echo "Si è verificato un errore sul prodotto: ". $cibo1 ->nome . ', '. $e->getMessage();
+}
+try {
+    $gioco1 ->setPrezzo(30);
+} catch (Exception $e) {
+    echo "Si è verificato un errore sul prodotto: ". $gioco1 ->nome . ', '. $e->getMessage();
+}
+
+
 
 ?>
 
